@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Web_Admin" %>
+
+<%@ Register Src="~/blocks/WUC_MenuQT.ascx" TagPrefix="uc1" TagName="WUC_MenuQT" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Css/QuanTri.css" rel="Stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../Javascript/jquery-1.7.2.min.js"></script>
+    <script> 
+        $(document).ready(function () {
+            $(".them1").hide();
+            $(".them").click(function () {
+                $(".them1").slideToggle("slow");
+            });
+        });
+    </script>
+    <style type="text/css">
+        .auto-style4 {
+            width: 89%;
+        }
+        .auto-style5 {
+            width: 174px;
+        }
+        .auto-style6 {
+            width: 59px;
+        }
+        .auto-style7 {
+            width: 152px;
+        }
+        .auto-style8 {
+            width: 602px;
+        }
+        .auto-style9 {
+            width: 99%;
+            margin-top: 0px;
+        }
+        .auto-style11 {
+            width: 61px;
+        }
+        .auto-style12 {
+            width: 88%;
+        }
+        .ten{
+            font-size:20px;
+        }
+        .auto-style17 {
+            width: 97%;
+        }
+        .auto-style18 {
+            width: 555px;
+        }
+        .auto-style20 {
+            width: 246px;
+        }
+        .auto-style22 {
+            width: 254px;
+        }
+        .auto-style24 {
+            width: 188px;
+        }
+        .auto-style25 {
+            width: 242px;
+        }
+        .auto-style26 {
+            width: 98%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style26">
+            <tr>
+                <td style="color:#210582; font-size:20px;" class="auto-style22">Xin chào quản trị hệ thống:</td>
+                <td style="color:#dc0cca; font-weight:bold; font-size:20px;" class="auto-style20"><asp:Label ID="UserName" runat="server"></asp:Label></td>
+                <td class="auto-style25" style="color:#210582; font-size:20px;">Bạn đang truy cập với quyền:</td>
+                <td style="color:#dc0cca; font-weight:bold; font-size:20px;" class="auto-style24"><asp:Label ID="lblQuyenHan" runat="server"></asp:Label></td>
+                <td>
+                    <asp:LinkButton ID="lbtLogout"  runat="server" CausesValidation="False" OnClick="lbtLogout_Click">Logout</asp:LinkButton></td>
+                <td>
+                    <asp:LinkButton ID="lbtDoiMk"  runat="server" CausesValidation="False" OnClick="lbtDoiMk_Click" >Đổi mật khẩu</asp:LinkButton></td>
+
+            </tr>
+        </table>
+       
+
+        <div id="menu" style="border:1px solid black;">
+            <table class="auto-style9">
+                <tr>
+                    <td class="auto-style7">
+                        <table class="auto-style4">
+                            <tr>
+                                <td><asp:ImageButton ID="ibtTrangChu" runat="server" ImageUrl="~/Image/home.png" Height="54px" Width="54px" OnClick="ibtTrangChu_Click" CausesValidation="False"/></td>
+                                <td><a href="TrangChu.aspx">Trang chủ</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                    <td class="auto-style7">
+                        <table class="auto-style12">
+                            <tr>
+                                <td class="auto-style11"><asp:ImageButton ID="ibtTinTuc" runat="server" ImageUrl="~/Image/tintuc.png" Width="54px" CausesValidation="False"/></td>
+                                <td><a href="#">Tin tức</a></td>
+                            </tr>
+                        </table>
+                        </td>
+                    <td class="auto-style5">
+                        <table class="auto-style4">
+                            <tr>
+                                <td><asp:ImageButton ID="ibtSanPham" runat="server" ImageUrl="~/Image/sanpham.png" Height="54px" Width="54px" CausesValidation="False"/></td>
+                                <td><a href="#">Sản phẩm</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="auto-style18">
+                        <table class="auto-style17">
+                            <tr>
+                                <td class="auto-style6"><asp:ImageButton ID="ibtLienHe" runat="server" ImageUrl="~/Image/lienhe.png" Height="54px" Width="54px" CausesValidation="False"/></td>
+                                <td class="auto-style8"><a href="#">Liêu hệ</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td class="auto-style6"><asp:ImageButton ID="imbAdmin" runat="server" ImageUrl="~/Image/Admin.png" Height="52px" Width="52px" CausesValidation="False" OnClick="imbAdmin_Click"/></td>
+                                <td class="auto-style8">
+                                    <asp:LinkButton ID="admin" runat="server" CausesValidation="False" OnClick="admin_Click">Quản trị Admin</asp:LinkButton></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="left1">
+            <uc1:WUC_MenuQT runat="server" ID="WUC_MenuQT" />
+        </div>
+        
+        <div id="content1">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="footer1">
+                Copyright &copy; 2016 LadyShop.com<br/> 
+                Address: University of transport and communications - campus II<br/>
+                Phone: 0963920772-01639773242-01864336295<br />
+                Email: phuonga1qn@gmail.com
+        </div>
+    </form>
+</body>
+</html>

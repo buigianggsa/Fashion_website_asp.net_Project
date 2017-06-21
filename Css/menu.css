@@ -1,0 +1,45 @@
+
+#menu {
+    height:50px;
+    border: 1px solid rgba(128, 128, 128, 0.61);
+    border-right:5px solid green;
+
+}
+
+#menu * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+}
+#menu a {
+    display:block;
+    padding:13px 20px 10px 10px;
+    white-space:nowrap;
+    height:27px;
+    font-family:serif, Times, 'Mongolian Baiti';
+    font-size:20px;
+    color:black;
+    text-decoration:none;
+}
+
+#menu li {
+    height:50px;
+    float:left;
+    border-right: 1px solid rgba(128, 128, 128, 0.61);
+
+}
+
+#trangchu a{
+    height:50px;
+    padding: 0px 0px 0px 0px;
+    background-color:green;
+}
+
+
+#menu a:hover{
+    background:#630a93;
+    color:white;
+    border-top: 1px solid green;
+}
+

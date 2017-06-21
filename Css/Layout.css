@@ -1,0 +1,220 @@
+﻿body {
+    margin:0px;
+    padding:0px;
+    font-family: Tahoma 'Times New Roman';
+}
+.container{
+    width:1200px;
+    margin:0px auto;
+}
+#banner{
+    width:1200px;
+    height:100px;
+    position:relative;
+}
+
+#dn_gh{
+    border-radius:5px;
+    border:1px solid #817f7f;
+    text-align:center;
+    padding:5px;
+    height:30px;
+	background-color: white; 
+}
+
+#dn_gh a{
+    text-decoration:none;
+    color:black;
+}
+#dn_gh a:hover{
+    color:red;
+}
+
+#left{
+    float:left;
+    width:250px;    
+    padding:0px;
+    margin-top:5px;
+    border:1px solid gray;
+}
+
+
+#content{
+    width:900px;
+    float:right;
+    padding:5px;
+    min-height:600px;
+}
+#waist{ 
+    border-top:5px solid green;
+    clear:both;
+    height:150px;
+    background-color:#eeeeee;
+}
+#waist a{
+    text-decoration:none;
+    color:#373535;
+}
+#waist a:hover{
+    color:green;
+}
+#footer{
+    clear:both;
+    padding:10px;
+    color:white;
+    background: transparent url(../Image/tacgia.png) repeat top left;
+    text-align:center;
+}
+.home{
+    height:50px;
+}
+
+.tieude{
+    background-color:green;
+    text-align:center;
+    color:white;
+    padding:10px;
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+.noidung{}
+.noidung a{
+    text-decoration:none;
+    color:blue;
+    font-weight:bold;
+}
+
+.motsp{
+    width:198px;
+    height:330px;
+    display:inline-block;
+    position: relative;
+    text-align:center;
+    margin: 7px 5px;
+}
+.motsp:hover{
+    box-shadow:0px 0px 7px green;
+}
+.motsp a{
+    text-decoration:none;
+}
+.tensp{
+    color:#178705;
+    font-weight:bolder;
+    position:absolute;
+    padding:5px 0px 20px 0px;
+    left:0px;
+    width:inherit;
+}
+.hinhsp{
+    height:250px;
+}
+
+.giasp{
+    color:red;
+    padding-top:45px;
+    font-style:italic;
+    font-weight:bold;
+}
+
+.tieudeh2{
+    height:30px;
+    color:black;
+    text-transform:uppercase;
+    font-size:17px;
+    background-color:#e5eae8;
+    font-weight:bolder;
+    margin: 10px 0px;
+    padding:12px 19px 0px 10px;
+    border-left:5px solid green;
+}
+
+#danhmuc{
+    margin-top:5px;
+}
+#danhmuc a{
+    display:block;
+    text-decoration:none;
+    padding:5px;
+    background-color:white;
+    color:green;
+    border-bottom: 1px dashed black;
+}
+#danhmuc a:hover{
+    background-color:#740868;
+    color:white;
+}
+.chungloaisp{   
+    background-color:white;
+    text-align:center;
+    padding: 10px 5px 5px 5px;
+    text-transform:uppercase;
+    border-bottom: solid green;
+    margin-top:0px;
+    font-weight:bolder;
+    font-size:larger;
+}
+.chungloaisp:hover{
+    background-color:#740868;
+    color:white;
+}
+
+.neoslideshow {
+    position:relative; 
+    width:1200px; 
+    height:300px;
+
+}
+
+.neoslideshow img {
+    position:absolute;
+    left:0; 
+    top:0; 
+    z-index:10;
+}
+
+/*Chi tiết sản phẩm*/
+
+
+.dong{font-size:16px;}
+
+#cot1 img
+{
+	border: 3px ridge #FFFFFF;
+	width: 200px;
+	height: 250px;
+	float: left;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+#cot1 img:hover
+{
+
+	float: left;
+	position: relative;
+	border: 5px ridge #FFFFFF;
+    transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-transform: scale(1.5,1.5);
+    -ms-transform: scale(1.5,1.5);
+}
+
+/*Hổ trợ khách hàng*/
+.ha{
+    border-right:5px solid #f2f3f4;
+}
+.ha img{
+    background-color:#dc0cc5;
+}
+.ha img:hover{
+    background-color:green;
+}
+
+
+
+

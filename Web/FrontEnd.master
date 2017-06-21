@@ -1,0 +1,267 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEnd.master.cs" Inherits="FrontEnd" %>
+<%@ Register Src="~/blocks/WUC_DanhMuc.ascx" TagPrefix="uc1" TagName="WUC_DanhMuc" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Lady Fashion</title> 
+    <link href="../Css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/Layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Javascript/jquery.js"></script>
+    <script type="text/javascript" src="../Javascript/jquery-scrolltofixed.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.neoslideshow img:gt(0)').hide();
+            setInterval(function(){
+            $('.neoslideshow :first-child').fadeOut().next('img').fadeIn().end().appendTo('.neoslideshow');},4000);
+        })
+        ////
+        //$(window).scroll(function () {
+        //    t = parseInt($(window).scrollTop()) -470;
+        //    $('#truot').stop().animate({ paddingTop: t }, 400);
+        //})
+        $(document).ready(function () {
+            $('#left').scrollToFixed();
+        });
+        $(document).ready(function () {
+            
+            $(".tieude").click(function () {
+                $(this).next().slideToggle();
+            });
+        });
+        
+    </script>
+   
+    <style type="text/css">
+        .auto-style5 {
+            height: 47px;
+        }
+        .auto-style6 {
+            width: 50px;
+            height: 50px;
+            margin-top: 0;
+        }
+        .auto-style7 {
+            height: 51px;
+        }
+        .auto-style15 {
+            width: 230px;
+            margin-left: 81px;
+        }
+        .auto-style18 {
+            width: 1113px;
+        }
+        .auto-style22 {
+            width: 45px;
+        }
+        .auto-style24 {
+            margin-left: 0px;
+        }
+        .auto-style29 {
+            width: 378px;
+        }
+        .auto-style30 {
+            width: 197px;
+        }
+        .auto-style33 {
+            width: 51px;
+        }
+        .auto-style34 {
+            width: 92px;
+        }
+        .auto-style35 {
+            width: 97px;
+        }
+        .auto-style36 {
+            width: 284px;
+        }
+        .auto-style37 {
+            width: 55px;
+            height: 41px;
+        }
+        .auto-style38 {
+            width: 182px;
+        }
+        .auto-style39 {
+            width: 124px;
+            height: 45px;
+        }
+        </style>
+	
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div class="container">
+        <div id="banner"> 
+                <table dir="ltr" class="auto-style18">
+                     <tr>
+                         <td class="auto-style36">
+                             <asp:ImageButton ID="ImageButton1" ImageUrl="~/Image/tenshop.png" runat="server" OnClick="ImageButton1_Click" CausesValidation="False" /></td>
+                         <td class="auto-style22" style="width:30px;"><asp:TextBox ID="txtTimKiem" placeholder="  Nhập tên sản phẩm ..." runat="server" Height="30px" Width="247px" Wrap="False" CssClass="auto-style24"></asp:TextBox></td>
+                         <td class="auto-style35"><asp:ImageButton ID="ibtTimkiem" ImageUrl="~/Image/timkiem.png" runat="server" Width="40px" Height="39px" OnClick="ibtTimkiem_Click" CausesValidation="False" /></td>
+                         <td class="auto-style30">
+                             <table style="width: 100%;">
+                                 <tr>
+                                     <td><img alt="" src="../Image/phone1.png" class="auto-style37" /></td>
+                                     <td><img alt="" src="../Image/phone2.png" class="auto-style38" /></td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                                 </table>
+                             </td>
+                         <td class="auto-style29">
+                            <table id="dn_gh" class="auto-style15">
+                                <tr>
+                                    <td class="auto-style33" style="border-right:1px solid black;">
+                                        <a href="DangNhap.aspx">Đăng nhập</a>  
+                                    </td>
+                                    <td class="auto-style34">
+                                        <asp:ImageButton ID="giohang" ImageUrl="~/Image/cart.png" runat="server" Height="17px" Width="28px" OnClick="giohang_Click" CausesValidation="False" /><a href="GioHang.aspx">Giỏ hàng</a> 
+                                        <asp:Literal ID="ltrSoLuong" runat="server" ></asp:Literal>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                     </tr>
+                </table>
+        </div>
+        
+        <div id="menu">
+		<ul>
+            <li id="trangchu" class="auto-style5"><a href="TrangChu.aspx" class="auto-style7"><img src="../Image/diachi.png" class="auto-style6"/></a></li>
+			<li><a href="SPTheoLoai.aspx" class="parent">Sản phẩm</a></li>
+			<li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Tin tức</a></li>
+			<li><a href="GioiThieu.aspx">Giới thiệu</a></li>
+			<li class="last"><a href="PhanHoiYKien.aspx">Phản hồi</a></li>
+            <li class="auto-style39" style="margin-left:450px; height:45px; padding:5px 0px 0px 25px";><b style="color:#787676"> Đang online: </b><asp:Label ID="lblDangTruyCap" ForeColor="Red" Font-Bold="true" runat="server" ></asp:Label>
+                <br />
+                <b style="color:#787676">Lượt truy cập: </b><asp:Label ID="lblDaTruyCap" ForeColor="Red" Font-Bold="true" runat="server" ></asp:Label>
+            </li>
+		</ul>
+        </div>
+        <div><marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="5" style="color:#9206c2; font-size:20px; font-family:'Mongolian Baiti'; font-weight:bold; padding-top:10px;">
+            <script type="text/javascript">
+                farbbibliothek = new Array();
+                farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+                farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+                farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+                farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+                farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+                farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+                farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+                farben = farbbibliothek[4];
+                function farbschrift()
+                {
+                    for(var i=0 ; i<Buchstabe.length; i++)
+                    {
+                        document.all["a"+i].style.color=farben[i];
+                    }
+                    farbverlauf();
+                }
+                function string2array(text)
+                {
+                    Buchstabe = new Array();
+                    while(farben.length<text.length)
+                    {
+                        farben = farben.concat(farben);
+                    }
+                    k=0;
+                    while(k<=text.length)
+                    {
+                        Buchstabe[k] = text.charAt(k);
+                        k++;
+                    }
+                }
+                function divserzeugen()
+                {
+                    for(var i=0 ; i<Buchstabe.length; i++)
+                    {
+                        document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "<\/span>");
+                    }
+                    farbschrift();
+                }
+                var a=1;
+                function farbverlauf()
+                {
+                    for(var i=0 ; i<farben.length; i++)
+                    {
+                        farben[i-1]=farben[i];
+                    }
+                    farben[farben.length-1]=farben[-1];
+                    setTimeout("farbschrift()",30);
+                }
+                //
+                var farbsatz=1;
+                function farbtauscher()
+                {
+                    farben = farbbibliothek[farbsatz];
+                    while(farben.length<text.length)
+                    {
+                        farben = farben.concat(farben);
+                    }
+                    farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+                }
+                setInterval("farbtauscher()",5000);
+
+                text= "Chào mừng các bạn đã đến với shop thời trang online Lady Shop !"; //h
+                string2array(text);
+                divserzeugen();
+                //document.write(text);
+            </script></marquee>
+
+        </div>
+        <br/>
+        <div class="neoslideshow">
+            <img src="../Image/slider8.png" width="1200" height="300" />
+            <img src="../Image/slider4.jpg" width="1200" height="300" />
+            <img src="../Image/slider2.jpg" width="1200" height="300" />
+            <img src="../Image/slider6.jpg" width="1200" height="300" />          
+        </div>
+
+        <div id="left">
+             <div class="tieude">Sản phẩm</div>
+             <div class="noidung">
+                 <uc1:WUC_DanhMuc runat="server" ID="WUC_DanhMuc" />
+             </div>
+        </div>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderNoiDung" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <div id="waist">
+            <table style="width: 100%; background-color:#eeeeee;">
+                <tr>
+                    <td valign="top"><h3 style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VỀ CHÚNG TÔI</h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="CachLienlac.aspx">Liên hệ</a><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="BaoHanh.aspx">Chính sách bảo hành</a><br />
+                    </td>
+                    <td><h3 style="font-weight:bold;">TRỢ GIÚP</h3>
+                        <a href="HoiDap.aspx">Hỏi đáp</a><br />
+                        <a href="HuongDanMuaHang.aspx">Hướng dẫn mua hàng</a><br />
+                        <a href="HuongDanThanhToan.aspx">Hướng dẫn thanh toán</a><br />
+                        <a href="PhanHoiYKien.aspx">Góp ý-Ý kiến khách hàng</a>
+                    </td>
+                    <td valign="top"><h3 style="font-weight:bold;">HỢP TÁC</h3>
+                        <a href="CachLienLac.aspx">Hợp tác kinh doanh</a><br />
+                        <a href="CachLienLac.aspx">Liên hệ hợp tác</a><br />
+                        <a href="#">Tuyển dụng</a><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="footer">
+                Copyright &copy; 2016 LadyShop.com<br/> 
+                Address: University of transport and communications - campus II<br/>
+                Phone: 0963920772-01639773242-01864336295<br />
+                Email: phuonga1qn@gmail.com
+        </div>
+    </div>
+    </form>
+</body>
+</html>

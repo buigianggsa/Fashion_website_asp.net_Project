@@ -1,0 +1,93 @@
+﻿body{
+    width:1250px;
+    margin:0px auto;
+}
+#menu a{
+    text-decoration:none;
+}
+#left1{
+    width:200px;
+    float:left;
+    padding:0px;
+    margin-top:5px;
+    border:1px solid gray;
+}
+
+#content1{
+    width:1000px;
+    float:right;
+    padding:5px;
+    min-height:600px;
+}
+#footer1{
+    clear:both;
+    padding:10px;
+    color:white;
+    background: transparent url(../Image/tacgia.png) repeat top left;
+    text-align:center;
+}
+#menuQT
+{
+	list-style:none;
+	float:left;
+	width:200px;
+	top:0px;
+	left:0px;
+	margin:0;
+	padding:0;
+}
+#menuQT li
+{
+	width:195px;
+	margin:0;
+	height:27px;
+	border-bottom:1px solid #A8D4FF;
+	padding:5px 0 0 5px;
+}
+#menuQT li a
+{
+	text-decoration:none;
+	color:#0002A8;
+	font-size:15px;
+}
+#menuQT li:hover
+{
+    background-color:#57e964;
+}
+#menuQT li a:hover{
+    color:#5154FF
+}
+
+ul #menuQT li:hover
+{
+	display:table;}
+ul #menuQT li ul a
+{ 
+    display:list-item;
+}
+
+.tieudeh2{
+    color:white;
+    text-transform:uppercase;
+    font-size:20px;
+    background-color:#740868;
+    font-weight:bolder;
+    margin: 10px 0px;
+    padding:9px 14px;
+    border-radius:5px;
+}
+
+.them{
+    padding-top:8px; 
+    text-align:center; 
+    color:white; 
+    height: 35px; 
+    background-color:green; 
+    font-weight:bold; 
+    font-size:25px; 
+    font-family:'Times New Roman';
+}
+.them1{
+    margin-left:150px; 
+    margin-top:20px;
+}
